@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'hantuel.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'root$hanguel',
-        'USER': 'root',
+        'NAME': 'hanguel',
+        'USER': 'ubuntu',
         'PASSWORD': 'jiyoung928',
-        'HOST': 'ec2-54-237-215-221.compute-1.amazonaws.com',
+        'HOST': '54.237.215.221',
         'PORT': '3306',
     }
 }
