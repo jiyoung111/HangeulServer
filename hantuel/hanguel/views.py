@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from hanguel.hanguel.serializers import WordSerializer
+from hantuel.hanguel.serializers import WordSerializer
 from .models import Word_tbl
 import random
 

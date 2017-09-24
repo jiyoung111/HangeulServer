@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url, include
 from rest_framework import routers
-from hanguel.hanguel import views
+from hantuel.hanguel import views
 
 router = routers.DefaultRouter()
 router.register(r'users', views.WordViewSet)
