@@ -5,6 +5,14 @@ from hantuel.hanguel.serializers import WordSerializer
 from .models import Word_tbl
 import random
 
+
+class WordViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = Word_tbl.objects.all()
+    serializer_class = WordSerializer
+    
 @api_view(['GET'])
 def word_detail(request):
     """
