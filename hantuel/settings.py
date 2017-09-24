@@ -25,7 +25,7 @@ SECRET_KEY = '_@b$7xm8=@q_!n)4dsjb(bj-0-tt78pt^k9w-_7(3ccu(#5jp8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'hantuel.hanguel',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,12 @@ WSGI_APPLICATION = 'hantuel.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'root$hanguel',
+        'USER': 'root',
+        'PASSWORD': 'jiyoung928',
+        'HOST': 'ec2-54-237-215-221.compute-1.amazonaws.com',
+        'PORT': '3306',
     }
 }
 

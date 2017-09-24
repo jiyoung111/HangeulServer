@@ -13,9 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls import url, include
+from rest_framework import routers
+from hanguel.hanguel import views
+
+router = routers.DefaultRouter()
+router.register(r'users', views.WordViewSet)
+
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^api/words/$', views.word_detail),
 ]
