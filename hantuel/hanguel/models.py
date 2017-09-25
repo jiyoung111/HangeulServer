@@ -11,7 +11,7 @@ class Word_tbl(models.Model):
 class Writing_tbl(models.Model):
     rid = models.BigAutoField(primary_key=True)
     uid = models.CharField(max_length=28, null=False)
-    wid = models.ForeignKey(Word_tbl, to_field='wid')
+    word = models.CharField(max_length=32, null=False)
     date = models.TextField(null=False)
     writing = models.TextField(null=False)
 

@@ -9,4 +9,4 @@ class WordSerializer(serializers.HyperlinkedModelSerializer):
 class WritingSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Writing_tbl
-        fields = ('rid', 'uid', 'wid', 'date', 'writing')
+        fields = ('rid', 'uid', 'word', 'date', 'writing')
