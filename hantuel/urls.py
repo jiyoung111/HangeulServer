@@ -26,6 +26,7 @@ router.register(r'users', views.WordViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^words/$', views.word_detail),
-    url(r'^writings/$', views.snippet_list),
+    url(r'^writings/$', views.writing_list),
     url(r'^wiritings/(?P<pk>[0-9]+)$', views.writing_detail),
+     url(r'^writings/view/(?P<pk>[0-9]+)$', views.view_writing),
 ]

@@ -71,4 +71,13 @@ def writing_detail(request, pk):
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+@api_view(['GET'])
+def view_writing(request, pk):
+     try:
+        writing = Writing_tbl.objects.get(pk=pk)
+     except Writing_tbl.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
 
+    if request.method == 'GET':
+        serializer = WritingSerializer(writing)
+        return Response(serializer.data)
