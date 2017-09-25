@@ -72,10 +72,13 @@ def writing_detail(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 @api_view(['GET'])
-def view_writing(request, pk):
-     try:
+def iew_writing(request, pk):
+    """
+    Retrieve, update or delete a snippet instance.
+    """
+    try:
         writing = Writing_tbl.objects.get(pk=pk)
-     except Writing_tbl.DoesNotExist:
+    except Writing_tbl.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
