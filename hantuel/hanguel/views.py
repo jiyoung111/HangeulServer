@@ -52,7 +52,7 @@ def writing_detail(request, pk):
     Retrieve, update or delete a snippet instance.
     """
     try:
-        snippet = Writing_tbl.objects.get(pk=pk)
+        snippet = Writing_tbl.objects.filter(wid=pk)
     except Writing_tbl.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
