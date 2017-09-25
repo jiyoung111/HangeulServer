@@ -53,7 +53,7 @@ def writing_detail(request, pk):
     """
     try:
         snippet = Writing_tbl.objects.get(pk=pk)
-    except Snippet.DoesNotExist:
+    except Writing_tbl.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
