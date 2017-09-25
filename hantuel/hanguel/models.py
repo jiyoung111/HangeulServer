@@ -12,7 +12,7 @@ class Writing_tbl(models.Model):
     rid = models.BigAutoField(primary_key=True)
     uid = models.CharField(max_length=28, null=False)
     wid = models.ForeignKey(Word_tbl, to_field='wid')
-    date = models.DateFeild(null=False)
+    date = models.DateField(null=False)
     writing = models.TextFeild(null=False)
 
 
